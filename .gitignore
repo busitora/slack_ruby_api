@@ -1,0 +1,3 @@
+# Ignore ruby gems.
+
+/vendor/bundle
