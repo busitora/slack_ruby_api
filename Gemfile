@@ -8,7 +8,7 @@ gem 'sinatra'
 gem 'slack-ruby-client'
 # https://github.com/slack-ruby/slack-ruby-client
 
-ugroup :development, :test do
+group :development, :test do
   gem 'awesome_print'
   gem 'pry-byebug'
   gem 'pry-doc'
