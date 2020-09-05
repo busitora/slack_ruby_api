@@ -7,6 +7,7 @@ gem 'rubocop'
 gem 'sinatra'
 gem 'slack-ruby-client'
 # https://github.com/slack-ruby/slack-ruby-client
+gem 'nokogiri'
 
 group :development, :test do
   gem 'awesome_print'

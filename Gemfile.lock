@@ -23,10 +23,13 @@ GEM
     gli (2.19.2)
     hashie (4.1.0)
     method_source (1.0.0)
+    mini_portile2 (2.4.0)
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.2)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
@@ -86,6 +89,7 @@ DEPENDENCIES
   async-websocket (~> 0.8.0)
   awesome_print
   dotenv
+  nokogiri
   pry-byebug
   pry-doc
   pry-rails
