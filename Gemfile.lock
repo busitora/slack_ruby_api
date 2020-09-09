@@ -89,6 +89,7 @@ DEPENDENCIES
   async-websocket (~> 0.8.0)
   awesome_print
   dotenv
+  faraday
   nokogiri
   pry-byebug
   pry-doc

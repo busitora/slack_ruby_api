@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 gem 'async-websocket', '~>0.8.0'
 gem 'dotenv'
+gem 'faraday'
 gem 'rubocop'
 gem 'sinatra'
 gem 'slack-ruby-client'
