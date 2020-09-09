@@ -3,7 +3,7 @@
 require 'sinatra'
 require 'json'
 require 'dotenv'
-require 'pry'
+# require 'pry'
 require 'slack-ruby-client'
 
 Dotenv.load
