@@ -4,6 +4,7 @@ require 'dotenv'
 require 'pry' if development?
 require 'slack-ruby-client'
 require './src/lgtm'
+require './src/cat'
 
 Dotenv.load
 
@@ -20,10 +21,14 @@ post '/webhook' do
   channel_id = params['channel_id']
   command = params['command']
 
+  # case文も共通化したいね
   case command
   when '/lgtm'
     lgtm = Lgtm.new
-    client.chat_postMessage channel: channel_id, text: '(LGTM)' + lgtm.image.to_s
+    client.chat_postMessage channel: channel_id, text: '(LGTM)' + lgtm.image
+  when '/cat'
+    neko = Cat.new
+    client.chat_postMessage channel: channel_id, text: neko.image
   end
   return
 end

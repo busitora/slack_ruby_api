@@ -1,4 +1,7 @@
 # slack-bot
 
 ## /lgtm 
-Lgtmの画像。
+LGTMの画像
+
+## /cat
+猫の画像
