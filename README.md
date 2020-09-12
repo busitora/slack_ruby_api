@@ -1,1 +1,4 @@
-# slack_ruby_api
+# slack-bot
+
+## /lgtm 
+Lgtmの画像。
