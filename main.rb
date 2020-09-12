@@ -17,7 +17,6 @@ post '/webhook' do
   end
 
   client = Slack::Web::Client.new
-
   channel_id = params['channel_id']
   command = params['command']
 
