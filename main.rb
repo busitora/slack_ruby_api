@@ -1,10 +1,9 @@
-# frozen_string_literal: true
-
 require 'sinatra'
 require 'json'
 require 'dotenv'
-# require 'pry'
+require 'pry' if development?
 require 'slack-ruby-client'
+require './src/lgtm'
 
 Dotenv.load
 
@@ -17,17 +16,15 @@ post '/webhook' do
     config.token = ENV['SLACK_API_TOKEN']
   end
 
-  # APIクライアントを生成
   client = Slack::Web::Client.new
-  # client = Slack::RealTime::Client.new
 
-  # #チャンネル名 of @ユーザー名
-  channel = '#x-nandemo-memo'
+  channel_id = params['channel_id']
+  command = params['command']
 
-  url = 'https://www.lgtm.app/api/images/random'
-  res = Faraday.get(url)
-  res_body = JSON.parse(res.body)
-
-  response = client.chat_postMessage(channel: channel, text: res_body['imageURL'])
-  p response
+  case command
+  when '/lgtm'
+    lgtm = Lgtm.new
+    client.chat_postMessage channel: channel_id, text: '(LGTM)' + lgtm.image.to_s
+  end
+  return
 end
